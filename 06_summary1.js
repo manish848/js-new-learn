@@ -31,3 +31,31 @@ console.log(typeof time);
 
 
 //https://262.ecma-international.org/5.1/#ec-11.4.3
+
+
+
+// memory allocations int the javascript
+
+// strack (memory), heap(primitive)
+
+// stack we get a copy and for heap we get a reference for that
+
+
+let name = "manish";
+let name1 = name // now a copy is assigned to us intead of assigning a complete refeence , so if we change the name1 there will be no change in the name
+
+console.log(name);
+console.log(name1);
+name1 = "mkk";
+console.log(name);
+console.log(name1);
+
+
+let user = {
+    name : "manish",
+    age : 16
+}
+let cuser = user
+cuser.age = 26  // so as the refence was provided to us so just because of that now if we update this , the earlier value will also be updated in the case
+console.log(user)
+console.log(cuser)
