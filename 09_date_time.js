@@ -20,3 +20,22 @@ console.log(newdate.toString())
 let mycreatedate = new Date("01-14-2023")
 
 // timestamps in the javascript
+
+//the timestamp is being calculated in miliseconds derom the firsdt jan of the 1970 , and when we put the value in the timestamp this is being published to us
+
+let mydate1 =  Date.now()
+console.log(mydate1) // this is always a number 
+console.log(mycreatedate.getTime()) // getTime() function is really good this gives us the value on the milliseconds, so always try to remeber this thing this is really very important
+
+let newdate2 = new Date()
+// now if we want to extract the day , time and anything then how we should procedd for that , that is really very very important
+
+console.log(newdate2.getDay())
+
+// toLocaleString this method is really good and we can acheive the many good solutions using this problem ,so understand this , this is really good
+
+// we can get the any object type for the string
+
+newdate2.toLocaleString('default',{
+    weekdate: "long",
+})
