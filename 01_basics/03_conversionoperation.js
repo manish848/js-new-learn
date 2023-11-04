@@ -14,6 +14,8 @@ let valueinnumber = Number(new_age)
 console.log( )
 console.log(typeof (valueinnumber))
 
+console.log("manish")
+
 
 
 new_age = "33abc"
@@ -26,10 +28,10 @@ new_age = null
 valueinnumber = Number(new_age) // but if we pass a null into it it will convert it into the zero , again this is another good thing
 console.log(valueinnumber)
 console.log(typeof (valueinnumber))
-
+console.log("manish")
 
 new_age = null
-valueinnumber = String(new_age) // but if we pass a null into it it will convert it into the zero , again this is another good thing
+valueinnumber = String(new_age) // but if we pass a null into it it will convert it into the zero , again this is another good thing// it will make it "null"
 console.log(valueinnumber)
 console.log(typeof (valueinnumber))
 
