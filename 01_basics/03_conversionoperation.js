@@ -11,10 +11,11 @@ console.log(new_score)
 
 let new_age = "33"
 let valueinnumber = Number(new_age)
-console.log( )
+console.log(valueinnumber )
 console.log(typeof (valueinnumber))
 
 console.log("manish")
+console.log("okkkkbhai")
 
 
 
@@ -41,6 +42,7 @@ valueinnumber = Number(new_age) // now the "NULL" string will be converted into 
 console.log(valueinnumber)
 console.log(typeof (valueinnumber))
 
+console.log("okkkkbhai")
 new_age = undefined
 console.log(typeof (new_age))
 valueinnumber = Number(new_age) //undefined will become the Nan
@@ -81,6 +83,8 @@ console.log(typeof (valueinnumber))
 // undefined => Nan // type number
 // "33abs" => Nan
 
+
+console.log("okkkkbhai")
 new_age = 1
 console.log(typeof (new_age))
  valueinnumber = Boolean(new_age) // true will be converted to the one
@@ -88,14 +92,17 @@ console.log(valueinnumber)
 console.log(typeof (valueinnumber))
 
 new_age = null
-console.log(typeof (new_age))
-valueinnumber = Boolean(new_age) // flase will be converted to the one
+
+
+console.log("bhai")
+console.log(typeof (new_age)) // type of the null is always the object , this thing is really good that type of the null is object we need to learn it very seriously
+valueinnumber = Boolean(new_age) // null will be converted to the false
 console.log(valueinnumber)
 console.log(typeof (valueinnumber))
 
 new_age =   undefined
 console.log(typeof (new_age))
-valueinnumber = Boolean(new_age) // false will be converted to the one
+valueinnumber = Boolean(new_age) // undefined will be conveteed to the flase
 console.log(valueinnumber)
 console.log(typeof (valueinnumber))
 

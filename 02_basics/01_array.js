@@ -17,6 +17,14 @@ in the shallow copy of the condition if we try tio chaneg the value of the copy 
 the original source will also chamge this does not happen with the case of the deep copy
 */
 
+/*In JavaScript, there are two ways to copy objects: shallow copy and deep copy. Shallow copying creates a new object with references to the same memory locations as the original object, while deep copying creates a new object with new memory locations for all of its properties and nested objects or arrays.
+
+Shallow copying can be more efficient in terms of performance, but may result in unexpected behavior if changes to a copied object affect the original object. Deep copying ensures that changes to a copied object do not affect the original object, but may be more expensive in terms of performance.
+
+While using JSON.parse() and JSON.stringify() is an easy way to create a deep copy of an object, it may not work in all cases. If you need to create a deep copy of an object, using JSON.parse() and JSON.stringify() is an easy option. However, if the object being copied contains functions or circular references, a recursive deep copy function may be necessary.
+
+ */
+
 const myarr2 = new Array( 1, 2,3 ,4)
 // object --->    prototype then there is one more prototype so just need to take care of this point this will dicussed after some time
 // array methods

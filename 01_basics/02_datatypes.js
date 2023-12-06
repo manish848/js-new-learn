@@ -1,6 +1,6 @@
 "use strict"; //all code as newew js version
 
-//alert("hello") // we are using node js not the browser
+//alert("hello") // we are using node js not the browser, so it will not work
 
 let name = "Hitesh";
 let valuei = 3;

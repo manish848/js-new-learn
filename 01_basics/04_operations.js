@@ -21,7 +21,7 @@ console.log(null+1+1); //2
 console.log(2+2+"1"+null);//41null
 console.log(2+true+1); //4
 console.log(2+true+1+"1"+true); //41true
-console.log(2+true+1+undefined+1); // this will give a Nan , so hioghest to tghe nan
+console.log(2+true+1+undefined+1); // this will give a Nan , so hioghest to tghe nan ----->>>   this is really very important in the javascript
 console.log(2+true+1+undefined+"1"); //Nan1
 console.log("2"+true+1+undefined); 
 console.log(3+ 4 * 5/2); // see the modular problem
@@ -38,6 +38,8 @@ x = "Xre";
 console.log(x);
 
 x = "que";
+
+console.log(x.slice(1)) // if we do not paas the second argument ino it , it will make the whole string
 x = "x" + x.slice(1);
 console.log(x); // this is how we can change one
 
