@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style = "background-color: black; color: white;"">
+    <ul class=""language>
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addlanguage(langname){ // first way to add the element  , we have to traverse the whole javascript so the optimization
+        const li = document.createElement('li');
+        li.innerHTML = `${langname}` // this goes all the thing so write the other thing
+        const ul = document.querySelector('ul').appendChild(li)
+        
+    }
+    function optilang(language){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(language)) // append child instead of the inner html it will not traverse the whole
+        const ul = document.querySelector('ul').appendChild(li)
+    }
+    addlanguage("pyhton" )
+    optilang("java")
+//edit
+    const secondlamng = document.querySelector("li:nth-child(2)") // learn the nth child in the css that is really very important to understand
+    // we will not use the innerHTML as it will not work as the optimization
+    const lis = document.createElement('li')
+    lis.textContent = "c++"
+    secondlamng.replaceWith(lis)
+
+    //edit
+    const firstlang = document.querySelector("li:first-child")
+    firstlang.outerHTML = '<li>mkk</li>'
+
+    //remove
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
+
+    // how to selectthe body of the file fo rthat we can use the tag query selector
+    document.querySelector("body")
+
+
+    
+     
+</script>
+</html>

@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style = "background-color: black; color: white;">
+    
+</body>
+<script>
+    const mydiv = document.createElement('div')
+    mydiv.className = "myclass"
+    mydiv.id = Math.round(Math.random()*10+1)
+console.log(mydiv)
+mydiv.setAttribute("title", "generated")
+mydiv.style.backgroundColor = 'green'
+mydiv.style.padding = '5px'
+const addtext = document.createTextNode("hai or code")
+mydiv.appendChild(addtext) // or directly write inner Text
+document.body.appendChild(mydiv) // this line is really very good to understand and really very very important to work for
+</script>
+</html>

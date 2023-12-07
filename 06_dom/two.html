@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style = "background-color: black; color: white;">
+    <div class ="parent"><div class="day"> Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thursday</div>
+</div>
+</body>
+<script>
+    // query selector works as the css tag name not the attributes
+    const parent = document.querySelector('.parent')
+    //  console.log(parent)
+    // console.log(parent.children[1].innerHTML)  // this will be a html collection , this property is really good to understand
+    //    for(let i =0;i<parent.children.length;i++)
+    //    {
+    //     console.log(parent.children[i].innerHTML)
+    //    }
+    //    parent.children[1].style.backgroundColor = 'blue'
+    //    console.log(parent.firstElementChild)
+    //    const dayone =  document.querySelector('.day') // this will give us the first
+    //    console.log(dayone.parentElement)
+    //    console.log(dayone.nextElementSibling)
+    console.log("NODES: ", parent.childNodes) // it will show the 9 child , as the line we are giving is also considered as a child we have to understand that, if we remove that space it will only showe us the 4 child
+    
+
+</script>
+</html>
+
+
+<!-- 
+    div.day*4 and then enter
+
+    why to use the script tag in the html
+The <script> tag is used to embed a client-side script (JavaScript).
+The <script> element either contains scripting statements, or it points to an external script file through the src attribute.
+Common uses for JavaScript are image manipulation, form validation, and dynamic changes of content.
+
+
+-->

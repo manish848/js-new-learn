@@ -6,30 +6,120 @@
     <style>
         .bg-black{
            background-color: black; 
-           color: white;
+           color: white; 
         }
     </style>
 </head>
 <body class = "bg-black">
     <div >
-          <h1 id ="title" class="heading">Learning  DOM</h1>
+          <h1 id ="title" class="heading">Learning  DOM <span style="display :none;"> haanhe bhai seeks</span></h1>
+          <h1> haan ab bata bhai kya bol raha tha bhsodile</h1>
+          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum natus illo mollitia nam fuga</h2>
+          <h2>bhai tu gya ab</h2>
            <p>Lorem ipsum dolor, sit ametn.</p>
+           <input type="password", name="mkk", id=" "ckk>
+           <ul>
+            <li class ="list">one</li>   <!-- comand option and option shift arrow is good-->
+            <li class ="list">one</li>   <!-- comand option and option shift arrow is good-->
+            <li class ="list">two </li>
+            <li class ="list">three</li>
+           </ul>
     </div>
 </body>
 </html>
 
 <!--
+    document.getElementById('title')   // the whole thing will be there
+    document.getElementById('title').id
     document method have all tab, get element by id
-    .className
+    .className  ------- class name is there
+
 
     .getAttribute('id')
+    .getAttribute('class')
+
+     .setAttribute('class', 'test heading') / it always overwrite the value this we have to remeber
+
+     const title = document.getElementById('title') 
+     title.style.backgroundColor = 'green'
 
     .stAttribute, always return the undefined but it will set the value
 const vali = document.getElementById("title")
 
 vali.style.borderRadius = '50px'
-vali.textContent =
-vali.innerHTML
-vali.innerText
+vali.textContent =            will show the display none wala span also , sp this show whole content  this gives us the content of that particular things this is really good to understand
+vali.innerHTML = '' it will show the html value also , it will show the tags also
+vali.innerText =        innertext will not show the dispaly none, this show what is visible there 
+
+
+query selectors in the javascript  
+document.querySelector('h2')  so first h2 it will show   // it will show the whole html
+----- if we want to select the html that have id equal to the title ,, we write it #  and class by this .
+document.querySelector('#title')
+document.querySelector('.heading')
+document.querySelector('input[type="password"]')
+document.querySelector('p:first-child')
+
+const mylist = document.querySelector('ul')
+mylist.querySelector('li').style.backgroundColor = 'greeen'
+const mylist = document.querySelectorAll('li') --   this gives a node list this is not an array
+mylist[0].style.color = 'red'
+this also gievs us a for each loop , this will not give us a map , this is sight different from the js array
+mylist.forEach(function(l){l.style.backgroundColor = 'red'})
+
+
+const mylist = document.getElementByClassName('list')    /// the return type for this is the html collection type
+no for each available for this so this will be an error
+so we have to convert this value into an array that is really good to understand
+newarray = Array.from(mylist)
+newarray.forEach(function(l){l.style.backgroundColor = 'red'})
+
+
+#@$%^&*()))))))))))*&^  interesting thing to remeber here   
+The main difference between these two functions is the way they select elements. getElementById() only works with ID attributes, while querySelector() can work with any CSS selector.
+When to use querySelector()
+querySelector() is useful when you need to select an element using a CSS selector. This is especially useful when you need to select an element based on its class or tag name. querySelector() can also be used to select the first matching element of a group of elements, which can be helpful in certain situations.
+
+When to use getElementById()
+getElementById() is useful when you need to select an element using its ID attribute. Since IDs must be unique within a page, getElementById() will always return the correct element. getElementById() is also faster than querySelector(), which can be important in performance-sensitive applications.
+
+
+
+
+The <br> tag inserts a single line break. 
+
+On submit, send the form-data to a file named "action_page.php" (to process the input):
+<form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+
+
+
 
 -->
