@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>bol bhai</h1>
+    <button id = "start">Start</button>
+    <button id="stop">Stop</button> 
+</body>
+<script>
+        const manish = function(str){
+        console.log(str+ "1234")
+    } 
+    // now we like to start the thing with the start button and the end with the end button so for that we have to write the event listener
+
+   let changeme; // this is really a very good concept to understand this is really really good man
+   document.querySelector("#start").addEventListener('click', function(e){
+    changeme = setInterval(manish,1000, "hi")
+    })
+    // const changeme = setInterval(manish,1000, "hi") // we can pass the things like this this is really good to understand
+    // clearInterval(changeme)
+
+    document.querySelector("#stop").addEventListener('click', function(e){
+        clearInterval(changeme) 
+    })
+
+</script>
+</html>

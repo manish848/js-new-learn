@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // javascript have the sequentioal running of the events , this we have to take care very importantly
+     // browser events do not run it on such a way, they will run on an activity like selecting the mouse , clicking the keyboard and many more events
+      // on click event we can also write in the html , onclick give a alert
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }   but this also does not give us that much functanillty so we need to add a onclick things also to read about it , that is really important too understand ok
+
+        // document.getElementById('owl').addEventListener('click', function(e){alert("owl clicked")}, false)
+          // what is false
+
+     // attachEvent()
+    // jQuery - on event listener
+
+
+
+    // e here is the event object in the event listener and we need to know more about this
+    //environment and browserevents , read about them carfefully
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    // event propogation ---> so we will do that what is this ,, if we put a false then it will be called event bubling and this is by default on , one is called event capturing when we put this value as true then event will be propgagated
+
+    // so ul have the owl also , so when it is false then the first owll will be shown then the image , but if it is the image then this will be revered completely that is called the event capturing , first bigger then the shorter
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation() .. bubbling will not happen in this case
+    // }, false)
+    
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault(); .. the google will not take to the google so this again a very good thing to do
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // }, false)
+
+
+    // document.querySelector('#images').addEventListener('click', function(e){ // it will apply on the whole ul
+    //     console.log(e.target.parentNode);  but if we click at the li then it will remove its parent also so that is again one problem
+    //         let removeIt = e.target.parentNode
+    //         removeIt.remove()
+    //     }
+
+
+   
+    
+    document.querySelector('#images').addEventListener('click', function(e){ // it will apply on the whole ul
+        console.log(e.target.tagName);
+        // tagName
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode // now this is a li so we will remove this li here so it will be a good thing to remeber
+            removeIt.remove()
+        }
+    
+        
+    })
+    
+    //removeIt.parentNode.removeChild(removeIt) // we go the the parent then we remove the child of that so this is again a really good thing to remeber
+</script>
+</html>
+
+
+<!--
+alt tag int he html
+    The alt attribute specifies an alternate text for an area, if the image cannot be displayed. The alt attribute provides alternative information for an image if a user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader).
+-->

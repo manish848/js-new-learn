@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>bol bhai</h1>
+    <button id="stop">Stop </button>
+
+</body>
+<script>
+    // we paas the handler so insted of running the functuon we can also pass that into it
+    const manish = function(){
+        console.log("okk bhai")
+    } 
+    setTimeout(manish,4000) 
+
+    setTimeout(function(){
+        console.log("Bhai tu chutiya hai kya ??")
+    },4000) // this will be done just once
+    setInterval(function(){
+        console.log("Naa to bhai") // this is kond of a loop 
+    },4000)
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "best JS series"
+    }
+    // hnadler and call back
+    const changeme = setTimeout(changeText,8000); // now we want to delete this timeout so we can use a clear timeout function but it will require a reference to that particular settimeout we want to stop
+     document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeme)
+        console.log("stoppedTimeout")
+     })
+</script>
+</html>
