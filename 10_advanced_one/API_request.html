@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div id="mkk"></div>
+    0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+<script>
+    // earlier we use to send the xml http request, so this is one good thing that we need to take cre here and this is really very very important
+    // this used to be the AJAx programing , asyncronus javascript and xml type of the programming this used to be
+    // earlier we used to send all the data using the XMLHTTPRequest -> class and we make a object
+    // const xhr = new XMLHttpRequest()
+    // const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+
+    // we send the request using the open key word
+    //  xhr.open('GET', requestUrl)
+     //now to send it we have to use send
+
+
+
+// json data
+    // const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    // const xhr = new XMLHttpRequest();
+    // xhr.open('GET', requestUrl)
+    // xhr.onreadystatechange = function(){ // this onreadystate change is used to write a function whever the styate changes so we need to tak ecare of this things , this a async program so whenver a state changes we can expect a data from them
+    //     console.log(xhr.readyState);
+    //     if (xhr.readyState === 4) {
+    //         console.log(this.responseText) // this is how we can use this data // this is sending a json data lets use someone who send a xml data
+    //     }
+    // }
+    // xhr.send();
+
+
+
+
+
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            console.log(typeof data);
+            console.log(data.followers);
+        }
+    }
+    xhr.send();
+
+
+
+
+
+
+
+//     // xml data
+//     const requestUrl2 = 'http://schemas.datacontract.org/2004/07/SmashFly.WebServices.ContactManagerService.v2'
+//     const xhr2 = new XMLHttpRequest();
+//     xhr2.open('GET', requestUrl2)
+//     xhr2.onreadystatechange = function(){ // this onreadystate change is used to write a function whever the styate changes so we need to tak ecare of this things , this a async program so whenver a state changes we can expect a data from them
+//         console.log(xhr2.readyState); // ready state return on what state this is right noew
+//         if (xhr2.readyState === 4) {
+//             //console.log(this.responseText) // this is how we can use this data // this is sending a json data lets use someone who send a xml data
+//             if (xhr2.status === 200) {
+//             console.log(xhr2.responseText);
+//             // You can parse the XML response if needed
+//             // const xmlDoc = new DOMParser().parseFromString(xhr2.responseText, 'application/xml');
+//             // console.log(xmlDoc);
+//         } else {
+//             console.error('Error:', xhr2.status, xhr2.statusText);
+//         }
+//     }
+// }
+//     xhr2.send();
+
+
+
+
+
+
+     
+</script>
+</body>
+</html>
+
+
+
